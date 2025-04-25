@@ -1,14 +1,12 @@
-import './App.css';
+import "./App.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function App() {
-
   const [animalData, setAnimalData] = useState([]); // Initial empty state
 
   // Function to fetch Animals
   const fetchallAnimals = async () => {
-
     try {
       const response = await fetch(`http://localhost:5005/tiere`);
       const data = await response.json();
