@@ -1,21 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import AnimalCard from './components/AnimalCard';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import AnimalCard from "./components/AnimalCard";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import reportWebVitals from './reportWebVitals';
+import AddAnimal from "./components/AddAnimal";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import reportWebVitals from "./reportWebVitals";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
         <Route path="/" element={<App></App>}></Route>
-        <Route path="/animalcard/:id" element={<AnimalCard></AnimalCard>}></Route>
+        <Route
+          path="/animalcard/:id"
+          element={<AnimalCard></AnimalCard>}
+        ></Route>
+        <Route path="/addanimal" element={<AddAnimal></AddAnimal>}></Route>
       </Routes>
     </Router>
-  </React.StrictMode >
+  </React.StrictMode>
 );
 
 // <Route path="./animallist" element={<AnimalList></AnimalList>}></Route>
